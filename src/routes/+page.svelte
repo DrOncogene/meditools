@@ -1,59 +1,20 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+  import Hero from '$lib/images/hero-img.svg'
+  import { openDrawer, openSideBar } from '$lib/utils';
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<div class="flex items-center justify-center flex-wrap xl:flex-nowrap w-full p-16">
+  <div class="flex flex-col space-y-6">
+    <h1 class="font-bold text-5xl">Welcome!</h1>
+    <h4 class="text-3xl w-4/5">What are you looking to calculate?</h4>
+    <button on:click={openDrawer} class="btn bg-primary-500 rounded-md text-white w-min md:hidden">Get started</button>
+    <button on:click={openSideBar} class="btn bg-primary-500 rounded-md text-white w-min max-md:hidden">Get started</button>
+  </div>
+  <div class="w-[500px] h-[400px] grid place-items-center">
+    <img src="{Hero}" alt="">
+  </div>
+</div>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
 
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
 </style>
