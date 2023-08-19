@@ -28,7 +28,7 @@
 </script>
 
 <div
-  class="w-[380px] h-full relative border border-primary-500 bg-white transition-all duration-200 {styles}"
+  class="max-w-[380px] h-full relative border border-primary-500 bg-white transition-all duration-200 {styles}"
 >
   <TabGroup
     class="space-y-0"
