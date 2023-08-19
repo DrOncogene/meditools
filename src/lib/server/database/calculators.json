@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "Body Mass Index",
+    "shortName": "BMI",
+    "description": "Calculate your BMI",
+    "url": "/calculators/bmi",
+    "variables": ["weight", "height"],
+    "categoryId": 1
+  }
+]

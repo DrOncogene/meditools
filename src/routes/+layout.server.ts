@@ -1,26 +1,18 @@
-import prisma from "$lib/prisma";
-import type { LayoutServerLoad } from "./$types";
+import prisma from '$lib/prisma';
+import { get } from 'svelte/store';
+import type { LayoutServerLoad } from './$types';
+import { loadDb } from '$lib/server/db';
+import { calcStore, categoriesStore } from '$lib/stores/calculators';
 
 export const load: LayoutServerLoad = async (request) => {
-  const name = request.url.pathname.split("/").pop();
+  await loadDb();
 
-  const categories = await prisma.category.findMany({
-    include: {
-      calculators: true,
-    },
-  });
-
-  const calculators = await prisma.calculator.findMany({});
-
-  const calculator = await prisma.calculator.findFirst({
-    where: {
-      shortName: name?.toUpperCase(),
-    },
-  });
+  const name = request.url.pathname.split('/').pop();
+  const calculator = get(calcStore).find((calc) => calc.shortName === name?.toUpperCase());
 
   return {
     id: <number>calculator?.id,
-    categories,
-    calculators,
+    categories: get(categoriesStore),
+    calculators: get(calcStore)
   };
 };
