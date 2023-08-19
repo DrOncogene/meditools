@@ -24,16 +24,16 @@
 
   <main class="flex justify-center relative overflow-hidden max-h-[calc(100vh_-_80px)]">
     <div class="absolute left-0 top-0 w-8 h-full border border-primary-500">
-      <button on:click={openDrawer} class="w-8 bg-primary-500 p-1 md:hidden">
+      <button on:click={openDrawer} class="w-8 bg-primary-500 p-1 xl:hidden">
         <Icon icon="mdi:menu" color="#fff" class="w-6 h-6" />
       </button>
-      <button on:click={openSideBar} class="w-8 bg-primary-500 p-1 max-md:hidden">
+      <button on:click={openSideBar} class="w-8 bg-primary-500 p-1 max-xl:hidden">
         <Icon icon="mdi:menu" color="#fff" class="w-6 h-6" />
       </button>
     </div>
     <Sidebar />
     <section
-      class="grid auto-rows-auto md:auto-cols-auto w-full h-full ml-8 lg:ml-[380px] transition-[margin-left] duration-200 border-t-2 border-surface-600 overflow-auto"
+      class="grid auto-rows-auto md:grid-cols-[1.5fr_1fr] justify-center w-full h-full ml-8 xl:ml-[380px] transition-[margin-left] duration-200 border-t-2 border-surface-600 overflow-auto"
     >
       <slot />
     </section>

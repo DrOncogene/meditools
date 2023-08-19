@@ -5,12 +5,17 @@
 </script>
 
 <aside
-  class="side-bar w-0 fixed top-20 left-0 h-full transition-all duration-200 z-40 overflow-hidden lg:w-[380px]"
+  class="side-bar w-0 fixed top-20 left-0 h-full transition-all duration-200 z-40 overflow-hidden xl:w-[380px]"
 >
-  <Drawer width="w-[380px]" rounded="rounded-none" regionDrawer="mt-[80px]" class="lg:hidden">
-    <TabbedAccordion closeFunction={closeDrawer} />
+  <Drawer
+    width="w-[380px]"
+    rounded="rounded-none"
+    regionDrawer="mt-[80px]"
+    class="xl:hidden xl:w-0"
+  >
+    <TabbedAccordion closeFunction={closeDrawer} styles="xl:w-0" />
   </Drawer>
-  <TabbedAccordion closeFunction={closeSideBar} styles="max-lg:w-0" />
+  <TabbedAccordion closeFunction={closeSideBar} styles="accordion max-xl:w-0" />
 </aside>
 
 <style>

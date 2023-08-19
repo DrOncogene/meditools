@@ -28,6 +28,7 @@ export const openSideBar = () => {
   main.classList.remove('!ml-8');
   sideBar.classList.remove('!w-0');
   accordion.classList.remove('!w-0');
+  accordion.classList.add('w-[380px]');
 };
 
 export const addToFavourites = (e: MouseEvent, id: number) => {
