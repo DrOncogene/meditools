@@ -2,6 +2,7 @@
   import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
   import { getContext } from 'svelte';
   import { page } from '$app/stores';
+  import { closeDrawer } from '$lib/utils';
 
   const categories: Category[] = getContext('categories');
   $: activeTab = (href: string) =>
@@ -21,7 +22,9 @@
         <ul class="list-nav text-sm">
           {#each category.calculators as calculator}
             <li class="{activeTab(calculator.url)} border-b border-surface-900">
-              <a href={calculator.url} class="!rounded-none ml-4">{calculator.name}</a>
+              <a on:click={closeDrawer} href={calculator.url} class="!rounded-none ml-4"
+                >{calculator.name}</a
+              >
             </li>
           {/each}
         </ul>
