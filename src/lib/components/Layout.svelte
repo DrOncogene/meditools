@@ -39,7 +39,9 @@
   </form>
   <div class="py-3">
     <span class="mb-5 block text-lg font-semibold text-surface-900">Result: </span>
-    <div class="result bg-primary-500 h-60 ml-5 text-white text-5xl grid place-content-center">
+    <div
+      class="result bg-primary-500 h-60 p-5 text-white text-3xl md:text-5xl text-center grid place-content-center"
+    >
       <slot name="result" />
     </div>
   </div>

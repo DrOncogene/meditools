@@ -13,7 +13,7 @@
     {@const border = idx === categories.length - 1 ? 'border-none' : 'border-b-2'}
     <AccordionItem
       rounded="rounded-none"
-      regionPanel="px-0 pb-0"
+      regionPanel="!px-0 pb-0"
       class="text-lg border-b-2 border-surface-900"
     >
       <svelte:fragment slot="summary">{category.name}</svelte:fragment>

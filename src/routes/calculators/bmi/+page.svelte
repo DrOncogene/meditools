@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { page } from "$app/stores";
-  import Layout from "$lib/components/Layout.svelte";
-  import Input from "$lib/components/Input.svelte";
+  import { page } from '$app/stores';
+  import Layout from '$lib/components/Layout.svelte';
+  import Input from '$lib/components/Input.svelte';
 
   export let form;
 
@@ -21,6 +21,7 @@
     name="weight"
     radioName="wtUnit"
     radioLabels={['kg', 'lb']}
+    styles="mr-4"
   />
   <Input
     bind:radioVar={htUnit}
@@ -33,13 +34,15 @@
   />
 
   <span slot="result">
-  {#if form}
-    {form.result} {form.unit}
-    <span class="text-lg text-secondary-500 font-bold">{form.description}</span>
-  {/if}
+    {#if form}
+      {form.result}
+      {form.unit}
+      <span class="text-lg text-secondary-500 font-bold">{form.description}</span>
+    {/if}
   </span>
 
   <span slot="description">
-    BMI is also known as quetelet index. It is a very important, quick to calculate health tool that tells how healthy one is
+    BMI is also known as quetelet index. It is a very important, quick to calculate health tool that
+    tells how healthy one is
   </span>
 </Layout>
