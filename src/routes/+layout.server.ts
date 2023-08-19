@@ -1,4 +1,3 @@
-import prisma from '$lib/prisma';
 import { get } from 'svelte/store';
 import type { LayoutServerLoad } from './$types';
 import { loadDb } from '$lib/server/db';
