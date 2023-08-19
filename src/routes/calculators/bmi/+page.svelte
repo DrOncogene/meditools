@@ -9,6 +9,10 @@
   let htUnit = 'cm';
 </script>
 
+<svelte:head>
+  <title>Body Mass Index</title>
+</svelte:head>
+
 <Layout id={$page.data.id}>
   <span slot="title">Body Mass Index (BMI)</span>
   <span slot="subtitle">Calculates body mass index</span>
@@ -21,7 +25,6 @@
     name="weight"
     radioName="wtUnit"
     radioLabels={['kg', 'lb']}
-    styles="mr-4"
   />
   <Input
     bind:radioVar={htUnit}

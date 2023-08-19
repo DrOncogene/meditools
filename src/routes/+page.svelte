@@ -6,6 +6,9 @@
 <!-- <div
   class="flex items-center justify-center flex-wrap xl:flex-nowrap w-full p-8 md:p-16 overflow-hidden"
 > -->
+<svelte:head>
+  <title>MediTools | Home</title>
+</svelte:head>
 <div class="flex flex-col space-y-6 p-8 md:p-16 md:pr-0 self-center">
   <h1 class="font-bold text-3xl md:text-5xl">Welcome!</h1>
   <h4 class="text-2xl md:text-3xl w-4/5">What are you looking to calculate?</h4>

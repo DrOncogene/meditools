@@ -16,7 +16,7 @@
   export let radioName: string = '';
 </script>
 
-<div class="flex justify-between relative box-border {width}">
+<div class="grid grid-cols-[1fr_3fr_1fr] gap-5 relative box-border {width}">
   {#if label}
     <label for={name} class="mr-2 font-semibold text-sm md:text-lg text-surface-900"
       >{label}
@@ -35,7 +35,7 @@
     {placeholder}
     class="block px-{size[0]} py-{size[1]} {iconString
       ? 'pl-8'
-      : ''} border-surface-900 placeholder:text-surface-900 placeholder:text-sm rounded-md border {styles}"
+      : ''} border-surface-900 placeholder:text-surface-900 placeholder:text-sm rounded-md border w-full {styles}"
   />
 
   {#if radioVar !== null}
