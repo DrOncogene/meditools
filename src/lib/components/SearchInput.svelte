@@ -45,12 +45,16 @@
     placeholder="Search for a calculator"
     class="input autocomplete block px-2 py-1 pl-8 border-surface-900 placeholder:text-surface-900 placeholder:text-sm rounded-md bg-surface-600 border-2 w-full focus:outline-none focus:border-0"
   />
-  <div data-popup="popupAutocomplete" class="bg-primary-600 text-white rounded-md w-full z-50">
+  <div
+    data-popup="popupAutocomplete"
+    class="bg-primary-600 text-white rounded-md w-[150%] md:w-full duration-75 z-50"
+  >
     <Autocomplete
       bind:input={searchInput}
       options={calculatorLabels}
       on:selection={onPopupClick}
       regionItem="border-b border-primary-100"
+      regionEmpty="py-2 px-4"
     />
   </div>
 </div>

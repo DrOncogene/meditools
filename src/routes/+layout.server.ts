@@ -7,7 +7,7 @@ export const load: LayoutServerLoad = async (request) => {
   await loadDb();
 
   const name = request.url.pathname.split('/').pop();
-  const calculator = get(calcStore).find((calc) => calc.shortName === name?.toUpperCase());
+  const calculator = get(calcStore).find((calc) => calc.shortName === name);
 
   return {
     id: <number>calculator?.id,

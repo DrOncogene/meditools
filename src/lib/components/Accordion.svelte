@@ -11,19 +11,21 @@
 
 <Accordion spacing="space-y-0">
   {#each categories as category, idx}
-    {@const border = idx === categories.length - 1 ? 'border-none' : 'border-b-2'}
     <AccordionItem
+      autocollapse
       rounded="rounded-none"
       regionPanel="!px-0 pb-0"
-      class="text-lg border-b-2 border-surface-900"
+      class="text-lg font-medium border-b-2 border-surface-900"
     >
       <svelte:fragment slot="summary">{category.name}</svelte:fragment>
       <svelte:fragment slot="content">
         <ul class="list-nav text-sm">
-          {#each category.calculators as calculator}
-            <li class="{activeTab(calculator.url)} border-b border-surface-900">
-              <a on:click={closeDrawer} href={calculator.url} class="!rounded-none ml-4"
-                >{calculator.name}</a
+          {#each category.calculators as calculator, idx}
+            <li class={activeTab(calculator.url)}>
+              <a
+                on:click={closeDrawer}
+                href={calculator.url}
+                class="!rounded-none ml-3 border-t border-surface-900">{calculator.name}</a
               >
             </li>
           {/each}

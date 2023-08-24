@@ -2,10 +2,28 @@
   {
     "id": 1,
     "name": "Body Mass Index",
-    "shortName": "BMI",
+    "shortName": "bmi",
     "description": "Calculate your BMI",
     "url": "/calculators/bmi",
     "variables": ["weight", "height"],
     "categoryId": 1
+  },
+  {
+    "id": 2,
+    "name": "Pediatric Maintenance Fluid",
+    "shortName": "maintenance-fluid",
+    "description": "Calculate paediatric fluid maintenance",
+    "url": "/calculators/maintenance-fluid",
+    "variables": ["age", "weight"],
+    "categoryId": 2
+  },
+  {
+    "id": 3,
+    "name": "Pottasium correction",
+    "shortName": "k-correction",
+    "description": "Correction of hypokalemia",
+    "url": "/calculators/k-correction",
+    "variables": ["age", "weight", "serum K+", "target K+"],
+    "categoryId": 2
   }
 ]

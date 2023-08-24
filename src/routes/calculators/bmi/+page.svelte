@@ -14,8 +14,8 @@
 </svelte:head>
 
 <Layout id={$page.data.id}>
-  <span slot="title">Body Mass Index (BMI)</span>
-  <span slot="subtitle">Calculates body mass index</span>
+  <svelte:fragment slot="title">Body Mass Index (BMI)</svelte:fragment>
+  <svelte:fragment slot="subtitle">Calculates body mass index</svelte:fragment>
 
   <Input
     bind:radioVar={wtUnit}
@@ -25,6 +25,7 @@
     name="weight"
     radioName="wtUnit"
     radioLabels={['kg', 'lb']}
+    fieldValue={form?.data.weight}
   />
   <Input
     bind:radioVar={htUnit}
@@ -34,18 +35,28 @@
     name="height"
     radioName="htUnit"
     radioLabels={['cm', 'in']}
+    fieldValue={form?.data.height}
   />
 
-  <span slot="result">
+  <svelte:fragment slot="result">
     {#if form}
       {form.result}
       {form.unit}
-      <span class="text-lg text-secondary-500 font-bold">{form.description}</span>
     {/if}
-  </span>
+  </svelte:fragment>
+  <svelte:fragment slot="extra-info">
+    {#if form}
+      {form?.description}
+    {/if}
+  </svelte:fragment>
 
-  <span slot="description">
+  <svelte:fragment slot="description">
     BMI is also known as quetelet index. It is a very important, quick to calculate health tool that
     tells how healthy one is
-  </span>
+  </svelte:fragment>
+  <svelte:fragment slot="post_info">
+    {#if form?.postInfo}
+      {form?.postInfo}
+    {/if}
+  </svelte:fragment>
 </Layout>

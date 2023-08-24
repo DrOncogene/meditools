@@ -33,7 +33,7 @@
     </div>
     <Sidebar />
     <section
-      class="grid auto-rows-auto md:grid-cols-[1.5fr_1fr] justify-center w-full h-full ml-8 xl:ml-[380px] transition-[margin-left] duration-200 border-t-2 border-surface-600 overflow-auto"
+      class="grid auto-rows-min md:grid-cols-[1.5fr_1fr] justify-center w-full h-full ml-8 xl:ml-[380px] transition-[margin-left] duration-200 border-t-2 border-surface-600 overflow-auto"
     >
       <slot />
     </section>
