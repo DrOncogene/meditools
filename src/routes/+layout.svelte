@@ -10,6 +10,7 @@
   import { setContext } from 'svelte';
   import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
   import { storePopup } from '@skeletonlabs/skeleton';
+  import Footer from '$lib/components/Footer.svelte';
 
   setContext('categories', $page.data.categories);
   setContext('calculators', $page.data.calculators);
@@ -17,12 +18,12 @@
 </script>
 
 <div
-  class="app min-h-screen min-w-full grid grid-rows-[auto_1fr] gap-0"
+  class="app min-h-screen min-w-full grid grid-flow-row gap-0"
   style="background-color: #FAFDFF;"
 >
   <Header />
 
-  <main class="flex justify-center relative overflow-hidden max-h-[calc(100vh_-_80px)]">
+  <main class="flex justify-center relative overflow-hidden max-h-[calc(100vh_-_80px)] mt-20">
     <div class="absolute left-0 top-0 w-8 h-full border border-primary-500">
       <button on:click={openDrawer} class="w-8 bg-primary-500 p-1 xl:hidden">
         <Icon icon="mdi:menu" color="#fff" class="w-6 h-6" />
@@ -33,15 +34,13 @@
     </div>
     <Sidebar />
     <section
-      class="grid auto-rows-min md:grid-cols-[1.5fr_1fr] justify-center w-full h-full ml-8 xl:ml-[380px] transition-[margin-left] duration-200 border-t-2 border-surface-600 overflow-auto"
+      class="grid auto-rows-min md:grid-cols-[1.5fr_1fr] justify-center w-full h-full ml-8 xl:ml-[380px] transition-[margin-left] duration-500 border-t-2 border-surface-600 overflow-auto"
     >
       <slot />
     </section>
   </main>
 
-  <!-- <footer class="text-xl font-bold w-full h-20 bg-primary-500 grid place-content-center">
-		<p>FOOTER</p>
-	</footer> -->
+  <Footer />
 </div>
 
 <style>

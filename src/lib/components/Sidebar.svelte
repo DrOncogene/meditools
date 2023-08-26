@@ -5,12 +5,13 @@
 </script>
 
 <aside
-  class="side-bar w-0 fixed top-20 left-0 h-full transition-all duration-200 z-40 overflow-hidden xl:w-[380px]"
+  class="side-bar w-0 fixed top-20 left-0 h-full transition-all duration-500 z-40 overflow-hidden xl:w-[380px]"
 >
   <Drawer
     width="max-w-[380px]"
     rounded="rounded-none"
     regionDrawer="mt-[80px]"
+    duration={500}
     class="xl:hidden xl:w-0"
   >
     <TabbedAccordion closeFunction={closeDrawer} styles="xl:w-0" />

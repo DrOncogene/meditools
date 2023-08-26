@@ -56,7 +56,7 @@
   <div class="result-div py-3">
     <span class="mb-5 block text-lg font-semibold text-surface-900">Result: </span>
     <div
-      class="result bg-primary-500 h-52 p-5 text-white text-3xl md:text-5xl text-center grid place-content-center gap-4"
+      class="result bg-primary-500 h-52 p-5 text-white text-3xl md:text-5xl text-center grid place-content-center gap-4 rounded-md"
     >
       <span><slot name="result" /></span>
       <span class="text-lg text-secondary-500 font-bold"><slot name="extra-info" /></span>

@@ -17,7 +17,9 @@ export const closeSideBar = () => {
 
   main.classList.add('!ml-8');
   sideBar.classList.add('!w-0');
-  accordion.classList.add('!w-0');
+  setTimeout(() => {
+    accordion.classList.add('!w-0');
+  }, 500);
 };
 
 export const openSideBar = () => {
