@@ -3,9 +3,6 @@
   import { openDrawer, openSideBar } from '$lib/utils';
 </script>
 
-<!-- <div
-  class="flex items-center justify-center flex-wrap xl:flex-nowrap w-full p-8 md:p-16 overflow-hidden"
-> -->
 <svelte:head>
   <title>MediTools | Home</title>
 </svelte:head>
@@ -29,8 +26,6 @@
 >
   <img src={Hero} alt="" />
 </div>
-
-<!-- </div> -->
 
 <style>
 </style>

@@ -12,7 +12,7 @@
 </script>
 
 <header
-  class="fixed top-0 left-0 flex justify-between items-center px-5 py-3 h-20 w-full shadow-md shadow-surface-900"
+  class="fixed top-0 left-0 flex justify-between items-center px-5 py-3 h-20 w-full shadow-md shadow-surface-900 z-50"
 >
   <a href="/" class="placeholder bg-primary-500 grid place-content-center text-white px-6 py-4">M</a
   >

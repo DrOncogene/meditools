@@ -16,16 +16,16 @@
 </script>
 
 <footer
-  class="main-footer fixed top-1/2 right-0 text-xl font-bold w-max h-max -translate-y-1/2 grid grid-flow-col place-items-center translate-x-[200px] transition-all duration-500 z-20"
+  class="main-footer fixed top-1/2 right-0 text-xl font-bold w-max h-max -translate-y-1/2 grid grid-flow-col place-items-center translate-x-[200px] transition-all duration-500 z-50"
 >
   <button
     on:click={toggleFooter}
-    class="footer-btn font-black h-12 rounded-l-md bg-primary-500 hover:bg-primary-600 transition-all duration-500 shadow-2xl shadow-black"
+    class="footer-btn font-black h-12 rounded-l-md bg-primary-500 hover:bg-primary-600 transition-all duration-500 shadow-sm shadow-surface-900"
   >
     <Icon icon="mdi:chevron-left" class="text-white" />
   </button>
   <div
-    class="logo-cloud grid grid-cols-1 items-center justify-center bg-primary-500 rounded-none rounded-l-md [&>.logo-item]:p-4 shadow-xl shadow-black"
+    class="logo-cloud grid grid-cols-1 items-center justify-center bg-primary-500 rounded-none rounded-l-md [&>.logo-item]:p-4 shadow-md shadow-surface-900"
   >
     <a
       href="https://github.com/DrOncogene/meditools"
@@ -54,7 +54,7 @@
       </span>
     </a>
   </div>
-  <div class="bg-primary-500 [&>div]:rounded-none rounded-l-md shadow-2xl shadow-black">
+  <div class="bg-primary-500 [&>div]:rounded-none rounded-l-md shadow-xl shadow-surface-900">
     <div
       class="card bg-transparent p-3 ml-0.5 w-full h-max text-white grid grid-flow-row gap-2 items-center justify-center"
     >
