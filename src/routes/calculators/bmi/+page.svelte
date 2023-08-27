@@ -9,11 +9,7 @@
   let htUnit = 'cm';
 </script>
 
-<svelte:head>
-  <title>Body Mass Index</title>
-</svelte:head>
-
-<Layout id={$page.data.id}>
+<Layout id={$page.data.id} title="Body Mass Index">
   <svelte:fragment slot="title">Body Mass Index (BMI)</svelte:fragment>
   <svelte:fragment slot="subtitle">Calculates body mass index</svelte:fragment>
 

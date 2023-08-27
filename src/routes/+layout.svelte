@@ -6,11 +6,12 @@
   import Icon from '@iconify/svelte';
   import Header from '$lib/components/Header.svelte';
   import Sidebar from '$lib/components/Sidebar.svelte';
-  import { openDrawer, openSideBar } from '$lib/utils';
+  import { closeDrawer, openDrawer, openSideBar } from '$lib/utils';
   import { setContext } from 'svelte';
   import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
-  import { storePopup } from '@skeletonlabs/skeleton';
+  import { Drawer, storePopup } from '@skeletonlabs/skeleton';
   import Footer from '$lib/components/Footer.svelte';
+  import TabbedAccordion from '$lib/components/TabbedAccordion.svelte';
 
   setContext('categories', $page.data.categories);
   setContext('calculators', $page.data.calculators);
@@ -39,6 +40,16 @@
       <slot />
     </section>
   </main>
+  <Drawer
+    width="max-w-[380px]"
+    rounded="rounded-none"
+    regionDrawer="mt-[80px]"
+    duration={300}
+    zIndex="z-[100]"
+    class="xl:hidden xl:w-0"
+  >
+    <TabbedAccordion closeFunction={closeDrawer} styles="xl:w-0" />
+  </Drawer>
 
   <Footer />
 </div>

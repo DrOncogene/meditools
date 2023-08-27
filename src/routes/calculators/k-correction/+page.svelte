@@ -10,7 +10,7 @@
   let wtUnit = 'kg';
 </script>
 
-<Layout id={$page.data.id}>
+<Layout id={$page.data.id} title="Potassium correction">
   <svelte:fragment slot="title">Serum potassium correction</svelte:fragment>
   <svelte:fragment slot="subtitle">Calculate K+ dose for hypokalaemia correction</svelte:fragment>
   <!-- <SelectInput name="potassium" options={['one', 'two', 'three']} bind:bindVar={potassium} /> -->

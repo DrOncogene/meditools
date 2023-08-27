@@ -7,6 +7,7 @@
   import { afterUpdate } from 'svelte';
 
   export let id: number;
+  export let title: string;
 
   function scrollRes(e: Event) {
     const resDiv = document.querySelector('.result-div');
@@ -21,6 +22,10 @@
     }
   });
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+</svelte:head>
 
 <div class="left border-r-2 border-surface-600 px-4">
   <div class="border-b-2 border-surface-700 py-4">

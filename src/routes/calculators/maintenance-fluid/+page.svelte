@@ -9,11 +9,7 @@
   let wtUnit = 'kg';
 </script>
 
-<svelte:head>
-  <title>Maintenance Fluid Calculation</title>
-</svelte:head>
-
-<Layout id={$page.data.id}>
+<Layout id={$page.data.id} title="Maintenance fluid">
   <svelte:fragment slot="title">Paediatric Maintenance Fluid</svelte:fragment>
   <svelte:fragment slot="subtitle">
     Calculates maintenance fluid for children &lt; 18 years

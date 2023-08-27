@@ -54,7 +54,7 @@
       </span>
     </a>
   </div>
-  <div class="bg-primary-500 [&>div]:rounded-none rounded-l-md shadow-xl shadow-surface-900">
+  <div class="bg-primary-500 [&>div]:rounded-none rounded-l-md shadow-lg shadow-surface-900">
     <div
       class="card bg-transparent p-3 ml-0.5 w-full h-max text-white grid grid-flow-row gap-2 items-center justify-center"
     >
